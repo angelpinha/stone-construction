@@ -6,8 +6,11 @@ export default {
 		extend: {
 			fontFamily: {
 				sans: ['Inter Variable', ...defaultTheme.fontFamily.sans],
-				main: ['Bebas Neue'],
+				main: ['Bebas Neue', ...defaultTheme.fontFamily.mono],
 			},
+			// fontSize: {
+			// 	base: '24pt',
+			// },
 		},
 	},
 	plugins: [
