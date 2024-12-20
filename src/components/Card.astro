@@ -1,0 +1,38 @@
+---
+interface Props {
+  image: string;
+  title: string;
+  badge?: string[];
+  isNew?: boolean;
+}
+
+const { image, title, badge, isNew } = Astro.props;
+---
+
+<div>
+  <div class="card bg-base-100 w-[28rem] shadow-xl">
+    <figure>
+      <img src={image} alt="specialization" />
+    </figure>
+    <div class="card-body min-h-56">
+      {isNew && <div class="badge badge-accent font-main text-lg">NEW</div>}
+      <h2 class="pt-2 card-title font-main text-2xl">
+        {title}
+      </h2>
+      <p class="font-sans text-lg pb-4">
+        <slot />
+      </p>
+      <div class="card-actions justify-end">
+        {
+          Array.isArray(badge)
+            ? badge.map((badgeText) => (
+                <div class="badge badge-outline" key={badgeText}>
+                  {badgeText}
+                </div>
+              ))
+            : null
+        }
+      </div>
+    </div>
+  </div>
+</div>
