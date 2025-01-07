@@ -6,6 +6,8 @@ import hero04 from "../assets/hero04.jpg";
 import hero02 from "../assets/hero02.jpg";
 import hero03 from "../assets/hero03.jpg";
 import Card from "../components/Card.astro";
+import Map from "../components/Map.astro";
+import Faq from "../components/Faq.astro";
 import Contact from "../components/Contact.astro";
 ---
 
@@ -42,11 +44,11 @@ import Contact from "../components/Contact.astro";
 
   <!-- Middle content -->
   <div class="container mx-auto">
-    <h1 class="font-main italic underline py-6 text-4xl">
+    <h1 class="font-main italic underline py-6 text-2xl">
       You dream it, we build it.
     </h1>
 
-    <p class="font-sans text-xl indent-16">
+    <p class="font-sans indent-16">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
       ullamcorper, tortor a facilisis tincidunt, ante augue pellentesque elit,
       pellentesque euismod eros metus et tellus. Morbi vel quam in nisi bibendum
@@ -105,5 +107,7 @@ import Contact from "../components/Contact.astro";
       </Card>
     </div>
   </div>
+  <Map />
+  <Faq />
   <Contact />
 </Layout>

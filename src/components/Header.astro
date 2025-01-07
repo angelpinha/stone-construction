@@ -8,15 +8,34 @@ import { SITE } from "@values/consts";
     class="bg-accent flex items-center place-content-center space-x-2 px-5"
     aria-label="badge"
   >
-    <span class="font-main text-xl">Call us and get a free quote:</span>
-    <span class="font-main text-xl">{SITE.TELEPHONE}</span>
+    <span class="font-main">Call us and get a free quote:</span>
+    <span class="font-main">{SITE.TELEPHONE}</span>
   </div>
 
-  <!-- Header for mobile devices -->
-  <div class="navbar md:hidden bg-base-100">
+  <!-- This header applies for wide devices -->
+  <div class="navbar max-md:hidden mt-4">
     <div class="flex-1">
-      <a class="text-xl font-main px-4">Logo</a>
-      <span class="text-xl font-main">{SITE.COMPANY}</span>
+      <a class="font-main px-4">Logo</a>
+      <span class="font-main text-xl">{SITE.COMPANY}</span>
+    </div>
+    <div class="flex-none">
+      <ul class="menu menu-horizontal font-main text-xl px-2 py-0">
+        <li><a>navigation</a></li>
+        <li><a>navigation</a></li>
+        <li><a>navigation</a></li>
+      </ul>
+    </div>
+  </div>
+</header>
+
+<!-- Header for mobile devices -->
+<div class="md:hidden">
+  <div class="flex pt-4 mb-0">
+    <a class="font-main px-4 mx-auto">Logo</a>
+  </div>
+  <div class="navbar bg-base-100">
+    <div class="flex-1">
+      <span class="font-main text-xl px-4">{SITE.COMPANY}</span>
     </div>
     <div class="flex-none">
       <div class="drawer drawer-end">
@@ -58,19 +77,4 @@ import { SITE } from "@values/consts";
       </div>
     </div>
   </div>
-
-  <!-- This header applies for wide devices -->
-  <div class="navbar max-md:hidden mt-4">
-    <div class="flex-1">
-      <a class="text-2xl font-main px-4">Logo</a>
-      <span class="text-2xl font-main">{SITE.COMPANY}</span>
-    </div>
-    <div class="flex-none">
-      <ul class="menu menu-horizontal font-main text-2xl px-2 py-0">
-        <li><a>navigation</a></li>
-        <li><a>navigation</a></li>
-        <li><a>navigation</a></li>
-      </ul>
-    </div>
-  </div>
-</header>
+</div>

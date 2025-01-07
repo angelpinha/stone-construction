@@ -1,0 +1,17 @@
+---
+import React from "react";
+import { Map, Marker } from "pigeon-maps";
+---
+
+<section>
+  <h1 class="font-main py-6 text-2xl text-center">Where are we located</h1>
+  <div class="container mx-auto">
+    <Map
+      client:only
+      attribution={false}
+      height={600}
+      defaultCenter={[51.879, 4.6997]}
+      defaultZoom={11}
+    />
+  </div>
+</section>
