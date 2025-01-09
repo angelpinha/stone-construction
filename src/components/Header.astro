@@ -1,29 +1,35 @@
 ---
+import { Image } from "astro:assets";
 import { SITE } from "@values/consts";
+import mainLogo from "public/Stone.png";
 ---
 
 <!-- TODO: NAVBAR FOR MOBILE LAYOUT -->
 <header>
-  <div
-    class="bg-accent flex items-center place-content-center space-x-2 px-5"
-    aria-label="badge"
-  >
-    <span class="font-main">Call us and get a free quote:</span>
-    <span class="font-main">{SITE.TELEPHONE}</span>
-  </div>
-
-  <!-- This header applies for wide devices -->
-  <div class="navbar max-md:hidden mt-4">
-    <div class="flex-1">
-      <a class="font-main px-4">Logo</a>
-      <span class="font-main text-xl">{SITE.COMPANY}</span>
+  <div>
+    <div
+      class="bg-accent text-lg flex items-center place-content-center space-x-2 px-5"
+      aria-label="badge"
+    >
+      <span class="font-main">Call us and get a free quote:</span>
+      <span class="font-main">{SITE.TELEPHONE}</span>
     </div>
-    <div class="flex-none">
-      <ul class="menu menu-horizontal font-main text-xl px-2 py-0">
-        <li><a>navigation</a></li>
-        <li><a>navigation</a></li>
-        <li><a>navigation</a></li>
-      </ul>
+
+    <!-- This header applies for wide devices -->
+    <div class="navbar max-md:hidden mt-4">
+      <div class="flex-1">
+        <Image src={mainLogo} height="48px" alt="Logo" class="mx-6" />
+        <span class="font-main text-2xl">{SITE.COMPANY}</span>
+      </div>
+      <div class="flex-none">
+        <ul class="menu menu-horizontal font-main text-2xl px-2 py-0">
+          <li><a>About us</a></li>
+          <li><a>Services</a></li>
+          <li><a>Location</a></li>
+          <li><a>FAQs</a></li>
+          <li><a>Contact us</a></li>
+        </ul>
+      </div>
     </div>
   </div>
 </header>

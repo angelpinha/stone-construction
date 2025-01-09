@@ -2,111 +2,18 @@
 import { Image } from "astro:assets";
 import { SITE } from "@values/consts";
 import Layout from "../layouts/Layout.astro";
-import hero04 from "../assets/hero04.jpg";
-import hero02 from "../assets/hero02.jpg";
-import hero03 from "../assets/hero03.jpg";
-import Card from "../components/Card.astro";
+import Hero from "../components/Hero.astro";
+import About from "../components/About.astro";
+import Services from "../components/Services.astro";
 import Map from "../components/Map.astro";
 import Faq from "../components/Faq.astro";
 import Contact from "../components/Contact.astro";
 ---
 
 <Layout>
-  <div>
-    <div class="carousel my-4 w-full rounded-box">
-      <div id="hero04" class="carousel-item w-full">
-        <div class="relative">
-          <Image src={hero04} alt="" priority />
-          <div class="absolute flex m-8 inset-0 items-center justify-center">
-            <h1
-              class="font-main drop-shadow text-base-100 md:text-7xl text-2xl"
-            >
-              {SITE.COMPANY}
-            </h1>
-          </div>
-        </div>
-      </div>
-
-      <!-- <div id="hero02" class="carousel-item w-full"> -->
-      <!-- <Image src={hero02} alt="" /> -->
-      <!-- </div> -->
-
-      <!-- <div id="hero03" class="carousel-item w-full"> -->
-      <!-- <Image src={hero03} alt="" /> -->
-      <!-- </div> -->
-    </div>
-    <!-- <div class="flex w-full justify-center gap-2 py-2"> -->
-    <!-- <a href="#hero04" class="btn btn-xs">1</a> -->
-    <!-- <a href="#hero02" class="btn btn-xs">2</a> -->
-    <!-- <a href="#hero03" class="btn btn-xs">3</a> -->
-    <!-- </div> -->
-  </div>
-
-  <!-- Middle content -->
-  <div class="container mx-auto">
-    <h1 class="font-main italic underline py-6 text-2xl">
-      You dream it, we build it.
-    </h1>
-
-    <p class="font-sans indent-16">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-      ullamcorper, tortor a facilisis tincidunt, ante augue pellentesque elit,
-      pellentesque euismod eros metus et tellus. Morbi vel quam in nisi bibendum
-      maximus at a elit. Curabitur congue ornare tempus. Aenean risus ex, congue
-      id ultrices quis, congue in odio. Etiam in blandit lectus. Sed suscipit
-      massa lectus, id consectetur nibh viverra aliquet. Donec lectus nisi,
-      tincidunt sit amet erat nec, pretium bibendum libero. Donec a facilisis
-      velit. Nunc nunc nulla, dictum sollicitudin nibh eget, eleifend finibus
-      felis. Vivamus tristique malesuada lorem, eget vestibulum massa tristique
-      sit amet. Quisque imperdiet imperdiet erat, vel rhoncus purus interdum
-      sed.
-    </p>
-  </div>
-  <div class="max-xl:hidden">
-    <div
-      class="container mx-auto pt-16 pb-6 grid grid-flow-col gap-8 max-md:grid-flow-row place-items-center"
-    >
-      <Card
-        image={hero02.src}
-        title="Painting"
-        badge={["Residential", "Commercial"]}
-      >
-        Interior and exterior painting
-      </Card>
-      <Card
-        image={hero02.src}
-        title="Kitchen & Bathrooms"
-        badge={["Residential"]}
-        isNew="true"
-      >
-        We design and fix them
-      </Card>
-      <Card image={hero02.src} title="Home remodeling" isNew="true">
-        Interior and exterior painting
-      </Card>
-    </div>
-    <div
-      class="container mx-auto py-6 grid grid-flow-col gap-8 max-md:grid-flow-row place-items-center"
-    >
-      <Card
-        image={hero02.src}
-        title="Painting"
-        badge={["Residential", "Commercial"]}
-      >
-        Interior and exterior painting
-      </Card>
-      <Card
-        image={hero02.src}
-        title="Kitchen & Bathrooms"
-        badge={["Residential"]}
-      >
-        We design and fix them
-      </Card>
-      <Card image={hero02.src} title="Home remodeling" isNew="true">
-        Interior and exterior painting
-      </Card>
-    </div>
-  </div>
+  <Hero />
+  <About />
+  <Services />
   <Map />
   <Faq />
   <Contact />

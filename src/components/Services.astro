@@ -1,0 +1,76 @@
+---
+import Card from "../components/Card.astro";
+import hero04 from "../assets/hero04.jpg";
+import hero02 from "../assets/hero02.jpg";
+import hero03 from "../assets/hero03.jpg";
+---
+
+<div class="">
+  <h1 class="font-main indent-8 py-8 text-4xl">Our services</h1>
+  <div
+    class="container mx-auto pb-6 grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8 align-top"
+  >
+    <Card
+      image={hero02.src}
+      title="Painting"
+      badge={["Interior", "Exterior", "Maintenance"]}
+    >
+      Transform your apartment, house, or commercial property with our expert
+      painting services. Whether refreshing interiors or giving exteriors a
+      vibrant new look, we deliver flawless finishes using high-quality
+      materials for long-lasting results.
+    </Card>
+
+    <Card
+      image={hero02.src}
+      title="Kitchen"
+      badge={["Improvement", "Remodeling"]}
+    >
+      Revitalize your kitchen with custom designs and expert craftsmanship. From
+      modern upgrades to complete overhauls, we create functional and stylish
+      spaces tailored to your taste and lifestyle.
+    </Card>
+
+    <Card
+      image={hero02.src}
+      title="Bathroom"
+      badge={["Improvement", "Remodeling", "Maintenance"]}
+    >
+      Enhance your bathroom with innovative designs and premium materials.
+      Whether it's a sleek, contemporary upgrade or a luxurious retreat, we’ll
+      bring your vision to life with meticulous attention to detail.
+    </Card>
+    <Card
+      image={hero02.src}
+      title="Decorative Stone"
+      badge={["Interior", "Exterior", "Landscaping"]}
+    >
+      Add timeless elegance to your property with decorative stone
+      installations. Perfect for interior walls or exterior facades, our
+      craftsmanship ensures stunning results that enhance both aesthetics and
+      durability.
+    </Card>
+    <Card image={hero02.src} title="Concrete Work" badge={["Construction"]}>
+      From foundations to walkways, our concrete services are designed to last.
+      We specialize in high-quality concrete work for both residential and
+      commercial projects, offering strength and style to every structure.
+    </Card>
+    <Card image={hero02.src} title="Yard Improvements" badge={["Landscaping"]}>
+      Transform your outdoor space with our yard improvement services. Whether
+      landscaping, building patios, or creating custom outdoor features, we’ll
+      craft a yard that’s both functional and beautiful.
+    </Card>
+    <div class="xl:col-start-2 xl:col-span-1 lg:col-span-2">
+      <Card
+        image={hero02.src}
+        title="Roofing"
+        badge={["Maintenance"]}
+        isNew="true"
+      >
+        Protect your property with our reliable roofing services. From repairs
+        to new installations, we use durable materials and expert techniques to
+        ensure your roof stands strong against the elements.
+      </Card>
+    </div>
+  </div>
+</div>

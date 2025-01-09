@@ -1,0 +1,36 @@
+---
+import { Image } from "astro:assets";
+import { SITE } from "@values/consts";
+import hero04 from "../assets/hero04.jpg";
+import hero02 from "../assets/hero02.jpg";
+import hero03 from "../assets/hero03.jpg";
+---
+
+<div class="container pt-4">
+  <div class="carousel rounded-box">
+    <div id="hero04" class="carousel-item place-content-center w-full">
+      <div class="relative">
+        <Image src={hero04} alt="" inferSize priority />
+        <div class="absolute flex m-8 inset-0 items-end justify-end">
+          <h1 class="font-main drop-shadow text-base-100 md:text-3xl text-2xl">
+            {SITE.COMPANY}
+          </h1>
+        </div>
+      </div>
+    </div>
+    <div id="hero02" class="carousel-item place-content-center w-full">
+      <div class="relative">
+        <Image src={hero04} alt="" inferSize priority />
+        <div class="absolute flex m-8 inset-0 items-end justify-end">
+          <h1 class="font-main drop-shadow text-base-100 md:text-3xl text-2xl">
+            {SITE.COMPANY}
+          </h1>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="flex w-full justify-center gap-2 py-2">
+  <a href="#hero04" class="btn btn-xs">1</a>
+  <a href="#hero02" class="btn btn-xs">2</a>
+</div>

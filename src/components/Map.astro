@@ -1,16 +1,32 @@
 ---
 import React from "react";
-import { Map, Marker } from "pigeon-maps";
+import { Map, ZoomControl } from "pigeon-maps";
 ---
 
 <section>
-  <h1 class="font-main py-6 text-2xl text-center">Where are we located</h1>
+  <div class="container mx-auto">
+    <h1 class="font-main indent-8 py-8 text-4xl">Location</h1>
+    <div class="text-xl">
+      <p>
+        We are a proudly established company based in Cranberry, PA, dedicated
+        to serving our community with integrity and excellence. Our work
+        strictly adheres to all regulations and standards within Pennsylvania,
+        ensuring compliance, quality, and safety in every project we undertake.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h1 class="font-main indent-8 py-8 text-4xl">Our Coverage</h1>
   <div class="container mx-auto">
     <Map
-      client:only
+      client:only="react"
+      metaWheelZoom={true}
       attribution={false}
       height={600}
-      defaultCenter={[51.879, 4.6997]}
+      center={[40.4313, -79.9805]}
+      defaultCenter={[40.4313, -79.9805]}
       defaultZoom={11}
     />
   </div>
