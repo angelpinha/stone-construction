@@ -1,14 +1,66 @@
 ---
 import { Image } from "astro:assets";
 import { SITE } from "@values/consts";
-import hero04 from "../assets/hero04.jpg";
-import hero02 from "../assets/hero02.jpg";
-import hero03 from "../assets/hero03.jpg";
+import hero01 from "@assets/hero/01.jpg";
+import hero02 from "@assets/hero/02.jpg";
+import hero03 from "@assets/hero/03.jpg";
+import hero04 from "@assets/hero/04.jpg";
+import hero05 from "@assets/hero/05.jpg";
 ---
+
+<script>
+  <!-- document.querySelectorAll(".carousel-anchor").forEach((anchor) => { -->
+    <!-- anchor.addEventListener("click", (event) => { -->
+      <!-- event.preventDefault(); -->
+    <!-- }); -->
+  <!-- }); -->
+</script>
 
 <div class="container pt-4">
   <div class="carousel rounded-box">
-    <div id="hero04" class="carousel-item place-content-center w-full">
+    <div
+      id="hero01"
+      class="scroll-mt-32 carousel-item place-content-center w-full"
+    >
+      <div class="relative">
+        <Image src={hero01} alt="" inferSize priority />
+        <div class="absolute flex m-8 inset-0 items-end justify-end">
+          <h1 class="font-main drop-shadow text-base-100 md:text-3xl text-2xl">
+            {SITE.COMPANY}
+          </h1>
+        </div>
+      </div>
+    </div>
+    <div
+      id="hero02"
+      class="scroll-mt-32 carousel-item place-content-center w-full"
+    >
+      <div class="relative">
+        <Image src={hero02} alt="" inferSize priority />
+        <div class="absolute flex m-8 inset-0 items-end justify-end">
+          <h1 class="font-main drop-shadow text-base-100 md:text-3xl text-2xl">
+            {SITE.COMPANY}
+          </h1>
+        </div>
+      </div>
+    </div>
+    <div
+      id="hero03"
+      class="scroll-mt-32 carousel-item place-content-center w-full"
+    >
+      <div class="relative">
+        <Image src={hero03} alt="" inferSize priority />
+        <div class="absolute flex m-8 inset-0 items-end justify-end">
+          <h1 class="font-main drop-shadow text-base-100 md:text-3xl text-2xl">
+            {SITE.COMPANY}
+          </h1>
+        </div>
+      </div>
+    </div>
+    <div
+      id="hero04"
+      class="scroll-mt-32 carousel-item place-content-center w-full"
+    >
       <div class="relative">
         <Image src={hero04} alt="" inferSize priority />
         <div class="absolute flex m-8 inset-0 items-end justify-end">
@@ -18,9 +70,12 @@ import hero03 from "../assets/hero03.jpg";
         </div>
       </div>
     </div>
-    <div id="hero02" class="carousel-item place-content-center w-full">
+    <div
+      id="hero05"
+      class="scroll-mt-32 carousel-item place-content-center w-full"
+    >
       <div class="relative">
-        <Image src={hero04} alt="" inferSize priority />
+        <Image src={hero05} alt="" inferSize priority />
         <div class="absolute flex m-8 inset-0 items-end justify-end">
           <h1 class="font-main drop-shadow text-base-100 md:text-3xl text-2xl">
             {SITE.COMPANY}
@@ -31,6 +86,9 @@ import hero03 from "../assets/hero03.jpg";
   </div>
 </div>
 <div class="flex w-full justify-center gap-2 py-2">
-  <a href="#hero04" class="btn btn-xs">1</a>
-  <a href="#hero02" class="btn btn-xs">2</a>
+  <a href="#hero01" class="carousel-anchor btn btn-xs">1</a>
+  <a href="#hero02" class="carousel-anchor btn btn-xs">2</a>
+  <a href="#hero03" class="carousel-anchor btn btn-xs">3</a>
+  <a href="#hero04" class="carousel-anchor btn btn-xs">4</a>
+  <a href="#hero05" class="carousel-anchor btn btn-xs">5</a>
 </div>

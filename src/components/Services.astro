@@ -1,17 +1,21 @@
 ---
 import Card from "../components/Card.astro";
-import hero04 from "../assets/hero04.jpg";
-import hero02 from "../assets/hero02.jpg";
-import hero03 from "../assets/hero03.jpg";
+import painting from "@assets/services/01-painting.jpg";
+import kitchen from "@assets/services/02-kitchen.jpg";
+import bathroom from "@assets/services/03-bathroom.jpg";
+import stone from "@assets/services/04-stone.jpg";
+import concrete from "@assets/services/05-concrete.jpg";
+import yard from "@assets/services/06-yard.jpg";
+import roofing from "@assets/services/07-roofing.jpg";
 ---
 
 <div class="">
-  <h1 class="font-main indent-8 py-8 text-4xl">Our services</h1>
+  <h1 id="services" class="font-main indent-8 py-8 text-4xl">Our services</h1>
   <div
     class="container mx-auto pb-6 grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8 align-top"
   >
     <Card
-      image={hero02.src}
+      image={painting.src}
       title="Painting"
       badge={["Interior", "Exterior", "Maintenance"]}
     >
@@ -22,7 +26,7 @@ import hero03 from "../assets/hero03.jpg";
     </Card>
 
     <Card
-      image={hero02.src}
+      image={kitchen.src}
       title="Kitchen"
       badge={["Improvement", "Remodeling"]}
     >
@@ -32,7 +36,7 @@ import hero03 from "../assets/hero03.jpg";
     </Card>
 
     <Card
-      image={hero02.src}
+      image={bathroom.src}
       title="Bathroom"
       badge={["Improvement", "Remodeling", "Maintenance"]}
     >
@@ -41,8 +45,8 @@ import hero03 from "../assets/hero03.jpg";
       bring your vision to life with meticulous attention to detail.
     </Card>
     <Card
-      image={hero02.src}
-      title="Decorative Stone"
+      image={stone.src}
+      title="Decorative Stone & Tiling"
       badge={["Interior", "Exterior", "Landscaping"]}
     >
       Add timeless elegance to your property with decorative stone
@@ -50,19 +54,19 @@ import hero03 from "../assets/hero03.jpg";
       craftsmanship ensures stunning results that enhance both aesthetics and
       durability.
     </Card>
-    <Card image={hero02.src} title="Concrete Work" badge={["Construction"]}>
+    <Card image={concrete.src} title="Concrete Work" badge={["Construction"]}>
       From foundations to walkways, our concrete services are designed to last.
       We specialize in high-quality concrete work for both residential and
       commercial projects, offering strength and style to every structure.
     </Card>
-    <Card image={hero02.src} title="Yard Improvements" badge={["Landscaping"]}>
+    <Card image={yard.src} title="Yard Improvements" badge={["Landscaping"]}>
       Transform your outdoor space with our yard improvement services. Whether
       landscaping, building patios, or creating custom outdoor features, we’ll
       craft a yard that’s both functional and beautiful.
     </Card>
     <div class="xl:col-start-2 xl:col-span-1 lg:col-span-2">
       <Card
-        image={hero02.src}
+        image={roofing.src}
         title="Roofing"
         badge={["Maintenance"]}
         isNew="true"
