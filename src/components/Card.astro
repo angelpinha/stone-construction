@@ -3,10 +3,10 @@ interface Props {
   image: string;
   title: string;
   badge?: string[];
-  isNew?: boolean;
+  limitedTimeOffer?: boolean;
 }
 
-const { image, title, badge, isNew } = Astro.props;
+const { image, title, badge, limitedTimeOffer } = Astro.props;
 ---
 
 <div class="flex">
@@ -15,7 +15,7 @@ const { image, title, badge, isNew } = Astro.props;
       <img src={image} alt="specialization" />
     </figure>
     <div class="card-body">
-      {isNew && <div class="badge badge-accent font-main text-lg">NEW</div>}
+      {limitedTimeOffer && <div class="badge ml-auto badge-accent font-main italic text-lg">20% Off for limited time</div>}
       <h2 class="pt-2 card-title font-main text-2xl">
         {title}
       </h2>

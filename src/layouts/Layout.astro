@@ -12,7 +12,36 @@ import "@fontsource-variable/inter";
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
-    <title>Stone</title>
+    <title>El Stone & Construction Services</title>
+
+    <script is:inline>
+      function init() {
+        onScroll();
+
+        const backToTop = document.getElementById("back-to-top");
+        backToTop?.addEventListener("click", (event) => scrollToTop(event));
+
+        document.addEventListener("scroll", onScroll);
+      }
+
+      function onScroll() {
+        if (window.scrollY > 0) {
+          document.documentElement.classList.add("scrolled");
+        } else {
+          document.documentElement.classList.remove("scrolled");
+        }
+      }
+
+      function scrollToTop(event) {
+        event.preventDefault();
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth"
+        });
+      }
+
+      document.addEventListener("DOMContentLoaded", () => init());
+    </script>
   </head>
   <body class="flex flex-col min-h-dvh">
     <Header />
