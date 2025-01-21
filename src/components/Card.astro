@@ -15,7 +15,13 @@ const { image, title, badge, limitedTimeOffer } = Astro.props;
       <img src={image} alt="specialization" />
     </figure>
     <div class="card-body">
-      {limitedTimeOffer && <div class="badge ml-auto badge-accent font-main italic text-lg">20% Off for limited time</div>}
+      {
+        limitedTimeOffer && (
+          <div class="badge ml-auto badge-accent font-main italic text-lg">
+            20% Off for limited time
+          </div>
+        )
+      }
       <h2 class="pt-2 card-title font-main text-2xl">
         {title}
       </h2>
