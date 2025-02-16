@@ -8,7 +8,7 @@ import mainLogo from "public/Stone.png";
 <header>
   <div>
     <div
-      class="bg-accent text-lg flex items-center place-content-center space-x-2 px-5"
+      class="w-full fixed top-0 z-20 bg-accent text-lg flex items-center place-content-center space-x-2 px-5"
       aria-label="badge"
     >
       <span class="font-main">Call us and get a free quote:</span>
@@ -16,9 +16,9 @@ import mainLogo from "public/Stone.png";
     </div>
 
     <!-- This header applies for wide devices -->
-    <div class="navbar max-md:hidden mt-4">
+    <div class="navbar max-md:hidden mt-12">
       <div class="flex-1">
-        <Image src={mainLogo} height="48px" alt="Logo" class="mx-6" />
+        <Image src={mainLogo} height="48" alt="Logo" class="mx-6" />
         <span class="font-main text-2xl">{SITE.COMPANY}</span>
       </div>
       <div class="flex-none">
@@ -35,9 +35,9 @@ import mainLogo from "public/Stone.png";
 </header>
 
 <!-- Header for mobile devices -->
-<div class="md:hidden">
+<div class="md:hidden mt-8">
   <div class="flex pt-4 mb-0">
-      <Image src={mainLogo} height="48px" alt="Logo" class="mx-auto" />
+    <Image src={mainLogo} height="48" alt="Logo" class="mx-auto" />
   </div>
   <div class="navbar bg-base-100">
     <div class="flex-1">
@@ -75,11 +75,11 @@ import mainLogo from "public/Stone.png";
             class="menu bg-base-100 font-main text-xl min-h-full w-40 p-4 items-center"
           >
             <!-- Sidebar content here -->
-          <li><a href="#about">About us</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#location">Location</a></li>
-          <li><a href="#faq">FAQs</a></li>
-          <li><a href="#contact">Contact us</a></li>
+            <li><a href="#about">About us</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#location">Location</a></li>
+            <li><a href="#faq">FAQs</a></li>
+            <li><a href="#contact">Contact us</a></li>
           </ul>
         </div>
       </div>
